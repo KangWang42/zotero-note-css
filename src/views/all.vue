@@ -4,16 +4,25 @@ import { cards } from "../../public/cards.js";
 import { copyCSS } from "../../public/script.js";
 
 const searchword = ref("");
+const highlightMatch = (text, query) => {
+  const parts = text.split(new RegExp(`(${query})`, 'gi'));
+  return parts.map(part => part.toLowerCase() === query.toLowerCase()
+    ? `<mark>${part}</mark>`
+    : part).join('');
+};
+
+
 
 const filteredCards = computed(() => {
   if (!searchword.value.trim()) {
-    return cards.value; // 如果没有输入搜索词，则显示所有卡片
+    return cards.value;
   }
-  return cards.value.filter((card) =>
-    card.details.some((detail) =>
-      detail.toLowerCase().includes(searchword.value.toLowerCase())
-    )
-  );
+  return cards.value.filter(card =>
+    card.details.some(detail => detail.toLowerCase().includes(searchword.value.toLowerCase()))
+  ).map(card => ({
+    ...card,
+    details: card.details.map(detail => highlightMatch(detail, searchword.value))
+  }));
 });
 
 </script>
@@ -50,9 +59,7 @@ const filteredCards = computed(() => {
       <div class="pl-8">
         <h1 class="text-amber-500 pt-4">{{ card.subtitle }}</h1>
         <ol class="text-xs px-3 text-amber-950 font-bold">
-          <li class="py-2" v-for="detail in card.details" :key="detail">
-            {{ detail }}
-          </li>
+          <li  class="py-2" v-for="detail in card.details" :key="detail" v-html="detail"></li>
         </ol>
       </div>
       <div class="overflow-y-scroll max-h-72">
@@ -83,6 +90,12 @@ input {
   padding: 3px 20px;
   margin-bottom: 25px;
 }
+
+mark{
+  background-color: rgb(248, 245, 53);
+}
+
+
 </style>
 
   
