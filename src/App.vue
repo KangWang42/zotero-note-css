@@ -72,6 +72,10 @@ import { RouterLink, RouterView } from "vue-router";
 .github{
   display: none;
 }
+.return a{
+display: block;
+
+}
 
 }
 
