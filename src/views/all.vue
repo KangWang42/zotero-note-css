@@ -1,24 +1,24 @@
 <script setup>
 import { ref, computed } from "vue";
-import { cards } from "../../public/cards.js";
-import { copyCSS , highlightMatch  } from "../../public/script.js";
+import { cards } from "../cards.js";
+import { copyCSS , highlightMatch} from "../script.js";
 
 const searchword = ref("");
 
 const filteredCards = computed(() => {
-  if (!searchword.value.trim()) {
-    return cards.value;
-  }
-  return cards.value.filter(card =>
-    card.details.some(detail => detail.toLowerCase().includes(searchword.value.toLowerCase()))
-  ).map(card => ({
-    ...card,
-    details: card.details.map(detail => highlightMatch(detail, searchword.value))
-  }));
-});
+    if (!searchword.value.trim()) {
+      return cards.value;
+    }
+    return cards.value.filter(card =>
+      card.details.some(detail => detail.toLowerCase().includes(searchword.value.toLowerCase()))
+    ).map(card => ({
+      ...card,
+      details: card.details.map(detail => highlightMatch(detail, searchword.value))
+    }));
+  });
+
 
 </script>
-
 
 
 <template>
@@ -84,7 +84,7 @@ input {
 }
 
 mark{
-  background-color: rgb(248, 245, 53);
+  background-color: rgb(248, 125, 53);
 }
 
 

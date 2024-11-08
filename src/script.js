@@ -1,3 +1,5 @@
+import { computed } from 'vue';
+
 export function copyCSS(cssFileName) {
     fetch(`/zotero-theme/${cssFileName}`)
         .then(response => response.text())
@@ -16,7 +18,6 @@ export function copyCSS(cssFileName) {
 }
 
 
-
 export const highlightMatch = (text, query) => {
     const parts = text.split(new RegExp(`(${query})`, 'gi'));
     return parts.map(part => part.toLowerCase() === query.toLowerCase()
@@ -24,3 +25,6 @@ export const highlightMatch = (text, query) => {
       : part).join('');
   };
   
+
+
+

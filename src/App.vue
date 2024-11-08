@@ -1,12 +1,16 @@
 <script setup>
-import { RouterLink, RouterView } from "vue-router";
+
+
 </script>
 <script>
 </script>
 <template>
   <div class="container">
+<Float/>
     <header>
+
       <nav>
+    
         <span class="return"><a href="https://wk8686.top">返回博客</a> </span>
         <span class="return"
           ><a href="https://wk8686.top/archives/zoteroepi93">使用教程</a>
@@ -32,7 +36,7 @@ import { RouterLink, RouterView } from "vue-router";
           />
         </a>
       </span>
-
+   
       <div class="absolute cursor-pointerinline-block group right-52 wechat">
         <!-- 小尺寸的 SVG 微信图标 -->
         <svg
@@ -58,12 +62,13 @@ import { RouterLink, RouterView } from "vue-router";
         />
       </div>
     </header>
-
+   
     <RouterView></RouterView>
+
   </div>
 </template>
 
-<style scoped>
+<style  scoped>
 nav {
   width: 100%;
   font-size: 20px;

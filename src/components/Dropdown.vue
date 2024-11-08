@@ -1,6 +1,6 @@
 <template>
   <div class="demo-dropdown-wrap">
-    <a-dropdown>
+    <a-dropdown >
       <template #overlay>
         <a-menu @click="handleMenuClick">
           <a-menu-item key="1">
@@ -36,6 +36,7 @@
 </template>
 
 <script setup>
+import { FontSizeOutlined } from "@ant-design/icons-vue";
 import Dropdown from "ant-design-vue/es/dropdown/dropdown";
 
 const handleMenuClick = (e) => {
