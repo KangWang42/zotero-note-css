@@ -1,30 +1,4 @@
-# zotero-notecss
-
-This template should help get you started developing with Vue 3 in Vite.
-
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh# zotero笔记主题
+# zotero笔记主题
 
 ## 介绍
 
@@ -63,5 +37,3 @@ zotero本身的note样式比较朴素,在编辑器里提供了用于自定义CSS
 ## 查看我现在有哪些样式
 
 ![样式合集](https://pic-go-42.oss-cn-guangzhou.aliyuncs.com/img/202411061648880.webp)
-npm run build
-```
