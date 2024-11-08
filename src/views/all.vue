@@ -15,6 +15,7 @@ const filteredCards = computed(() => {
     )
   );
 });
+
 </script>
 
 

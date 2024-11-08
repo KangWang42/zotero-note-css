@@ -9,7 +9,7 @@ export const cards = ref([
         "我用的最多的css，感觉也最好看",
         "背景样式用的横线背景，个人觉得比较好看"
       ],
-      image: "https://pic-go-42.oss-cn-guangzhou.aliyuncs.com/img/202410281536561.webp",
+      image: "/pic/202410281536561.webp",
       cssFile: "zotero6-专注版加强.css",
       tags : [
         "主题"
@@ -29,7 +29,7 @@ export const cards = ref([
         "超链接也改了绿色",
         "这是一个做的很早的css，bug很多"
       ],
-      image: "https://pic-go-42.oss-cn-guangzhou.aliyuncs.com/img/202405231525656.png",
+      image: "/pic/202405231525656.png",
       cssFile: "zotero1-彩色.css",
       tags : [
         "主题"
@@ -46,7 +46,7 @@ export const cards = ref([
         "修改了一些字体大小和间距",
         "修改列表的hover突出显示"
       ],
-      image: "https://pic-go-42.oss-cn-guangzhou.aliyuncs.com/img/202411072254734.gif",
+      image: "/pic/202411072254734.gif",
       cssFile: "zotero-无序列表效果.css",
       tags : [
         "元素"
@@ -63,7 +63,7 @@ export const cards = ref([
         "修改了悬浮的阴影效果",
         "边框还不是太好看，应该再改改"
       ],
-      image: "https://pic-go-42.oss-cn-guangzhou.aliyuncs.com/img/202410311518795.gif",
+      image: "/pic/202410311518795.gif",
       cssFile: "zotero-图片样式.css",
       tags : [
         "元素"
@@ -79,7 +79,7 @@ export const cards = ref([
         "修改了一些字体大小",
         "三线表看不到左右边框，设置了hover样式，悬浮在上边能看到当前单元格的左右范围"
       ],
-      image: "https://pic-go-42.oss-cn-guangzhou.aliyuncs.com/img/202410281731967.webp",
+      image: "/pic/202410281731967.webp",
       cssFile: "zotero-表格片段.css",
       tags : [
         "元素"
@@ -93,7 +93,7 @@ export const cards = ref([
         "网格的背景",
         "网格的网眼设置比较大"
       ],
-      image: "https://pic-go-42.oss-cn-guangzhou.aliyuncs.com/img/202410281719535.webp",
+      image: "/pic/202410281719535.webp",
       cssFile: "zotero-网格背景.css",
       tags : [
         "背景"
@@ -108,7 +108,7 @@ export const cards = ref([
         "横线设置比较淡，不会影响文字，又有种书面感",
         "算是效果相当好的一个背景了"
       ],
-      image: "https://pic-go-42.oss-cn-guangzhou.aliyuncs.com/img/202410281804382.webp",
+      image: "/pic/202410281804382.webp",
       cssFile: "zotero-横线背景.css",
       tags : [
         "背景"
@@ -123,7 +123,7 @@ export const cards = ref([
         "点设置比较淡，不会影响文字",
         "感觉书面感没有那么强，似乎和笔记不太搭配？"
       ],
-      image: "https://pic-go-42.oss-cn-guangzhou.aliyuncs.com/img/202410281826796.webp",
+      image: "/pic/202410281826796.webp",
       cssFile: "zotero-点阵背景.css",
       tags : [
         "背景"
@@ -138,7 +138,7 @@ export const cards = ref([
         "横线设置比较淡，不会影响文字，又有种书面感",
         "区别在于加了一个比较明亮的左边线，用于存在缩进的情况下"
       ],
-      image: "https://pic-go-42.oss-cn-guangzhou.aliyuncs.com/img/202410281823012.webp",
+      image: "/pic/202410281823012.webp",
       cssFile: "zotero-横线背景2.css",
       tags : [
         "背景"
@@ -155,7 +155,7 @@ export const cards = ref([
       "超链接颜色",
       "加粗样式修改"
     ],
-    image: "https://pic-go-42.oss-cn-guangzhou.aliyuncs.com/img/202405231603347.gif",
+    image: "/pic/202405231603347.gif",
     cssFile: "zotero2-专注版.css",
       tags : [
         "主题"
@@ -171,7 +171,7 @@ export const cards = ref([
       "列表的颜色设置为橙色主题",
       "超链接的橙色效果"
     ],
-    image: "https://pic-go-42.oss-cn-guangzhou.aliyuncs.com/img/202405231629041.gif",
+    image: "/pic/202405231629041.gif",
     cssFile: "zotero3-tomatolight.css",
       tags : [
         "主题"
@@ -187,7 +187,7 @@ export const cards = ref([
       "列表的颜色设置为绿色主题",
       "超链接的绿色效果"
     ],
-    image: "https://pic-go-42.oss-cn-guangzhou.aliyuncs.com/img/202410282042176.webp",
+    image: "/pic/202410282042176.webp",
     cssFile: "zotero4-greenfocus.css",
       tags : [
         "主题"
@@ -202,7 +202,7 @@ export const cards = ref([
       "强迫症需要",
       "频繁使用copy来做笔记的同学需要"
     ],
-    image: "https://pic-go-42.oss-cn-guangzhou.aliyuncs.com/img/202410311444485.webp",
+    image: "/pic/202410311444485.webp",
     cssFile: "zotero-删除citation.css",
       tags : [
         "其它"

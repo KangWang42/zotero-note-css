@@ -64,7 +64,7 @@ import { RouterLink, RouterView } from "vue-router";
 
 <style scoped>
 
-@media (max-width: 900px) {
+@media (max-width: 800px) {
   .wechat{
   display: none;
 }
