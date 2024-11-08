@@ -6,12 +6,14 @@ import { RouterLink, RouterView } from "vue-router";
   <div class="container">
     <header>
       <nav>
+        <span class="return"><a href="https://wk8686.top">返回博客</a> </span>
+        <span class="return"><a href="https://wk8686.top/archives/zoteroepi93">使用教程</a> </span>
         <RouterLink to="/">全部CSS</RouterLink>
         <RouterLink to="/theme">主题CSS</RouterLink>
         <RouterLink to="/backview">背景CSS</RouterLink>
         <RouterLink to="/elemenview">元素CSS</RouterLink>
         <RouterLink to="/otherview">其它CSS</RouterLink>
-
+      
       </nav>
       <span
         class="absolute github right-72 transition ease-in-out delay-150 hover:scale-125 duration-300"
@@ -62,6 +64,16 @@ import { RouterLink, RouterView } from "vue-router";
 
 <style scoped>
 
+@media (max-width: 900px) {
+  .wechat{
+  display: none;
+}
+
+.github{
+  display: none;
+}
+
+}
 
 nav {
   width: 100%;
@@ -80,6 +92,16 @@ nav {
 
 .github{
   top:32px
+}
+.return a{
+  padding: 0 1rem;
+  color: rgb(33, 38, 57);
+  padding-right: 10px;
+  font-weight:600;
+}
+.return:nth-child(2) a{
+  padding-right: 30px;
+  border-right: green 4px dashed;
 }
 
 nav a.router-link-exact-active {
