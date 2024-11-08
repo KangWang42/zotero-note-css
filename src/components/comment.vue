@@ -27,7 +27,6 @@
           {{ dislikes }}
         </span>
       </span>
-      <span key="comment-basic-reply-to">Reply to</span>
     </template>
     <template #author><a>wang</a></template>
     <template #avatar>
@@ -47,6 +46,13 @@
 import dayjs from "dayjs";
 import { ref } from "vue";
 import relativeTime from "dayjs/plugin/relativeTime";
+import {
+  LikeOutlined,
+  LikeFilled,
+  DislikeOutlined,
+  DislikeFilled,
+} from "@ant-design/icons-vue";
+
 dayjs.extend(relativeTime);
 const likes = ref(0);
 const dislikes = ref(0);
