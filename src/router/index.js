@@ -4,6 +4,7 @@ import  themeview from '../views/themecss.vue'
 import otherview from '../views/其它.vue'
 import elemenview from '../views/元素.vue'
 import backview from '../views/背景.vue'
+
  
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),

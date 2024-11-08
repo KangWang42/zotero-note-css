@@ -1,11 +1,22 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
-</script>
 
+</script>
+<script>
+import Dropdown from './components/dropdown.vue'; // 确保路径正确
+
+export default {
+  components: {
+    Dropdown
+  }
+}
+
+</script>
 <template>
   <div class="container">
     <header>
       <nav>
+        
         <span class="return"><a href="https://wk8686.top">返回博客</a> </span>
         <span class="return"><a href="https://wk8686.top/archives/zoteroepi93">使用教程</a> </span>
         <RouterLink to="/">全部CSS</RouterLink>
@@ -13,6 +24,7 @@ import { RouterLink, RouterView } from "vue-router";
         <RouterLink to="/backview">背景CSS</RouterLink>
         <RouterLink to="/elemenview">元素CSS</RouterLink>
         <RouterLink to="/otherview">其它CSS</RouterLink>
+        <Dropdown/>
       
       </nav>
       <span

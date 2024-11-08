@@ -25,7 +25,7 @@ const filteredCards = computed(() => {
   <input
     v-model="searchword"
     type="text"
-    placeholder="关键词搜索CSS..."
+    placeholder="根据介绍搜索CSS..."
     class="search-box"
   />
   <div class="flex flex-wrap justify-center gap-y-20 pb-32 gap-x-2">
@@ -75,12 +75,12 @@ span.card {
 }
 
 input {
-  margin: 10px 30px;
-
+  margin: 10px 30px!important;
   border: grey 3px solid;
   border-radius: 15px;
   padding: 3px 20px;
-  margin-bottom: 25px;
+  margin-bottom: 25px!important;
+
 }
 
 mark{
