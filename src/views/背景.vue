@@ -15,7 +15,7 @@ const filteredCards = computed(() => {
 
 
 <template>
-     <Comment/>
+
       <div class="flex flex-wrap justify-center gap-y-20 pb-32 gap-x-2">
     <span v-for="card in filteredCards" :key="card" class="card hover:scale-105 duration-500 hover:shadow-2xl  relative h-auto mx-auto bg-gray-100 rounded-xl shadow-2xl min-w-72 w-1/4">
       <div class="flex items-center p-3">
