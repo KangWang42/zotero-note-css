@@ -14,3 +14,13 @@ export function copyCSS(cssFileName) {
             console.error('Error fetching CSS:', error);
         });
 }
+
+
+
+export const highlightMatch = (text, query) => {
+    const parts = text.split(new RegExp(`(${query})`, 'gi'));
+    return parts.map(part => part.toLowerCase() === query.toLowerCase()
+      ? `<mark>${part}</mark>`
+      : part).join('');
+  };
+  

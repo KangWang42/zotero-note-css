@@ -1,18 +1,9 @@
 <script setup>
 import { ref, computed } from "vue";
 import { cards } from "../../public/cards.js";
-import { copyCSS } from "../../public/script.js";
+import { copyCSS , highlightMatch  } from "../../public/script.js";
 
 const searchword = ref("");
-
-const highlightMatch = (text, query) => {
-  const parts = text.split(new RegExp(`(${query})`, 'gi'));
-  return parts.map(part => part.toLowerCase() === query.toLowerCase()
-    ? `<mark>${part}</mark>`
-    : part).join('');
-};
-
-
 
 const filteredCards = computed(() => {
   if (!searchword.value.trim()) {
