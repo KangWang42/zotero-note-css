@@ -83,8 +83,8 @@ input {
 
 }
 
-mark{
-  background-color: rgb(248, 125, 53);
+.card mark{
+  background-color: rgb(224, 174, 146);
 }
 
 
