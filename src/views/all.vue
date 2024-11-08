@@ -4,6 +4,7 @@ import { cards } from "../../public/cards.js";
 import { copyCSS } from "../../public/script.js";
 
 const searchword = ref("");
+
 const highlightMatch = (text, query) => {
   const parts = text.split(new RegExp(`(${query})`, 'gi'));
   return parts.map(part => part.toLowerCase() === query.toLowerCase()
