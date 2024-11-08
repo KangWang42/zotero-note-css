@@ -1,0 +1,182 @@
+/*超链接*/
+
+ a,
+ a:visited {
+     /* 普通状态和访问过的链接 */
+     color: #42B983;
+     /* 深绿色 */
+     text-decoration: underline;
+     /* 下划线 */
+ }
+
+ a:hover,
+ a:focus {
+     /* 鼠标悬停和聚焦状态 */
+     color: rgba(255, 69, 0, 0.5);
+     /* 更深的绿色 */
+ }
+
+
+ /* 引用 */
+ blockquote {
+     border-left: 4px solid #4caf50;
+     /* 鲜明的绿色边界 */
+     background-color: #e8f5e9;
+     /* 浅绿色背景 */
+     color: #2e7d32 ;
+     /* 引用文本的深绿色 */
+     padding: 0.01px ;
+     /* 内边距 */
+     margin: 0px 0;
+     /* 减小上下外边距 */
+ }
+
+/* 改间距 */
+ blockquote p{
+    margin: 10px;
+    padding-top: 0px;
+}
+
+
+ /* 加粗样式 */
+ b, strong {
+     font-size: 1em;
+     color: rgba(255, 69, 0, 1);
+     /* 橙红色 */
+     ;
+     background-color: #f0f0f0;
+     /* 淡灰色背景 */
+     padding: 2px 4px;
+     /* 加点内边距让背景更明显 */
+     border-radius: 2px;
+     /* 可选：为背景添加圆角 */
+ }
+
+
+                   /* 标题样式 */
+ h1 {
+     font-size: 1.2em;
+     margin-bottom: 2em;
+     margin-right: 5px;
+     padding: 8px 15px;
+     letter-spacing: 2px;
+     color: #000000;
+     /* 保持文字颜色为纯白色 */
+     border-left: 10px solid rgba(240, 19, 19, 0.5);
+     /* 可以根据需要调整边框颜色 */
+     background: rgba(240, 19, 19, 0.25);
+     border-radius: 5px;
+     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+     /* 文字阴影，增强对比 */
+     box-shadow: 1px 1px 2px rgba(51, 51, 51, 0.5);
+     /* 盒子阴影，可根据需要调整 */
+     text-align: center;
+ }
+
+
+ h2 {
+     font-size: 1em;
+     margin-bottom: 2em;
+     margin-right: 5px;
+     padding: 8px 15px;
+     letter-spacing: 2px;
+     color: #000000;
+     /* 保持文字颜色为纯白色 */
+     border-left: 10px solid rgba(102, 204, 153, 0.5);
+     /* 可以根据需要调整边框颜色 */
+     background: rgba(102, 204, 153, 0.25);
+     border-radius: 5px;
+     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+     /* 文字阴影，增强对比 */
+     box-shadow: 1px 1px 2px rgba(51, 51, 51, 0.5);
+     /* 盒子阴影，可根据需要调整 */
+     text-align: center;
+ }
+
+ h3 {
+     font-size: 1.1em;
+     margin-right: 5px;
+     letter-spacing: 2px;
+     padding: 10px 10px;
+     padding-left: 20px !important;
+     background: rgba(246, 249, 247, 0.7);
+     /* 保持文字颜色为纯白色 */
+     border-left: 10px solid rgba(66, 185, 131, 0.8);
+     /* 可以根据需要调整边框颜色 */
+     border-radius: 5px;
+     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+     /* 文字阴影，增强对比 */
+     box-shadow: 1px 1px 2px rgba(51, 51, 51, 0.5);
+     /* 盒子阴影，可根据需要调整 */
+ }
+
+
+                                                /* 列表设计 */
+ul{ 
+  list-style-type:disc; 
+  border-left: 5px solid #a8d08d;
+  border-radius: 10px;
+}
+
+
+
+ ol {
+     list-style-type: decimal;
+     border-left: 5px solid #a8d08d;
+     border-radius: 10px;
+    
+ }
+
+
+ /* 删除一级列表以外的左边框 */
+
+ ul ul,ol ol{
+    border-left: none;
+    font-size: 14px;
+ }
+
+
+
+/* 添加分割线 */
+ul li:not(ul ul li):not(ul li:first-child),
+ol li:not(ol ol li):not(ol li:first-child){
+    border-top: 3px solid #ccc;
+}
+
+
+
+
+ /* 根据嵌套层级改变颜色，只改变marker的颜色，如果去掉的话就是改不同级别文字的颜色*/
+ ul>li::marker,
+ ol>li::marker {
+     color: red;
+     font-size: 15px;
+ }
+
+ ul>li>ul>li::marker,
+ ul>li>ol>li::marker,
+ ol>li>ul>li::marker,
+ ol>li>ol>li::marker {
+     color: rgb(44, 80, 196);
+     font-size: 15px;
+ }
+
+ ul>li>ul>li>ul>li::marker,
+ ul>li>ul>li>ol>li::marker,
+ ul>li>ol>li>ul>li::marker,
+ ul>li>ol>li>ol>li::marker,
+ ol>li>ul>li>ul>li::marker,
+ ol>li>ul>li>ol>li::marker,
+ ol>li>ol>li>ul>li::marker,
+ ol>li>ol>li>ol>li::marker {
+     color: green;
+     font-size: 15px;
+ }
+
+
+ul ul ul ul  li::marker,
+ol ol ol ol li::marker{
+    color:#ccc
+}
+
+

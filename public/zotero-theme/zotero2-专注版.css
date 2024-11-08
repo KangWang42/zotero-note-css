@@ -1,0 +1,104 @@
+/*超链接*/
+
+
+
+a,
+a:visited {
+    /* 普通状态和访问过的链接 */
+    color: #4072E5;
+    /* 深绿色 */
+    text-decoration: underline;
+    /* 下划线 */
+}
+
+a:hover,
+a:focus {
+    /* 鼠标悬停和聚焦状态 */
+    color: rgba(255, 69, 0, 0.5);
+    /* 更深的绿色 */
+}
+
+
+
+
+blockquote:hover {
+    color:#495057;
+    background: #F8F9FA;
+    box-shadow: rgb(0 0 0 / 4%) 0px 3px 5px;
+    position: relative;
+    margin: 14px 0;
+    border: 3px solid hsl(17, 76%, 61%)!important;
+    transform: translateY(4px);
+}
+
+blockquote {
+    color: #495057;
+    background: #F8F9FA;
+    box-shadow: rgb(0 0 0 / 4%) 0px 3px 5px;
+    margin: 14px 0;
+    border: 2px solid #DEE2E6!important;
+    border-radius: 8px;
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.46, 0.95);
+}
+
+/* 改间距 */
+blockquote p{
+   margin: 10px;
+   padding-top: 0px;
+}
+
+
+/* 加粗样式 */
+strong{
+    background-color: rgba(190, 186, 186,0.2);
+    color: #1A365F;
+    font-weight: bold; 
+    font-size: 1.05em;
+    }
+    
+
+h1{
+    font-size: 1.5em!important;
+    color: #1A365F!important;
+    font-weight: 700!important;
+    text-align: center;
+}
+
+                  /* 标题样式 */
+h2 {
+    font-size: 1.3em!important;
+    font-weight: bolder!important;
+    color: #1A365F!important;
+    border-bottom: #ccc 2px solid!important;
+}
+
+
+h3 {
+    font-size: 1.2em!important;
+    color: #1A365F!important;
+
+}
+
+h3,h4,h5,h6{
+    font-size: 1.1em;
+    color: black;
+}
+
+
+                                               /* 列表设计 */
+ul{
+    list-style-type:disc;
+}
+
+ul li::marker{
+    color: #70B3B1!important;
+}
+
+ul,ol{
+  font-weight: bolder;
+}
+
+ul ul, ol ol{
+font-weight: normal;
+font-size: 14px;    
+}

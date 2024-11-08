@@ -1,0 +1,31 @@
+ 
+.regular-image .resized-wrapper .image {
+    outline: none; /* 将轮廓线设置为不显示 */
+}
+
+
+.primary-editor img{
+    max-width: 100%;           
+    height: auto;              
+    border: 3px solid #7786a1 !important;  
+    border-radius: 10px;        
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+
+img:hover {
+    transform: scale(1.2); /* 默认鼠标悬停时放大比例更大 */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+
+/* 媒体查询用于大屏设备，当屏幕宽度大于768px时 */
+@media (min-width: 500px) {
+    .primary-editor img {
+        max-width: 80%; 
+    }
+
+    .primary-editor img:hover {
+        transform: scale(1.05); /* 大屏幕时鼠标悬停放大比例较小 */
+    }
+}

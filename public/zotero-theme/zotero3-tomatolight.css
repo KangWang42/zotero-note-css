@@ -1,0 +1,100 @@
+/*超链接*/
+
+a {
+    border-bottom: #FF6347 2px solid !important;
+    color: black;
+    text-decoration: none;
+}
+
+
+
+blockquote p:hover {
+    border-bottom: #FF6347 dashed 3px !important;
+}
+
+blockquote {
+    color: #FF8C00;
+    background: #F2F2F2 !important;
+    margin: 14px 0;
+    border-left: #FF8C00 2px solid !important;
+}
+
+/* 改间距 */
+blockquote p:first-child {
+    padding-top: 10px;
+
+}
+
+blockquote p:last-child {
+    padding-bottom: 10px;
+
+}
+
+/* 加粗样式 */
+strong {
+    background-color: rgba(190, 186, 186, 0.2);
+    color: #1A365F;
+    font-weight: bold;
+    font-size: 1.05em;
+}
+
+
+h1 {
+    font-size: 1.5em !important;
+    font-weight: 700 !important;
+}
+
+/* 标题样式 */
+h2 {
+    font-size: 1.4em !important;
+    font-weight: bolder !important;
+    border-left: #FF6347 7px solid;
+    padding-left: 10px !important;
+}
+
+h2:hover {
+    font-size: 1.4em !important;
+    font-weight: bolder !important;
+    border-left: #00BFFF 7px solid;
+    padding-left: 10px !important;
+}
+
+h3 {
+    font-size: 1.4em !important;
+    font-weight: normal !important;
+    border-bottom: #FF6347 1px dashed;
+
+}
+
+h3:hover {
+    font-size: 1.4em !important;
+    font-weight: normal !important;
+    border-bottom: #00BFFF 1px dashed;
+
+}
+
+h4,
+h5,
+h6 {
+    font-size: 1.2em;
+    color: #FF6347 !important;
+}
+
+
+/* 列表设计 */
+ul {
+    list-style-type: disc;
+}
+
+ul ul {
+    list-style-type: circle;
+}
+
+ul ul ul {
+    list-style-type: square;
+}
+
+ul li::marker,
+ol li::marker {
+    color: #FF6347 !important;
+}

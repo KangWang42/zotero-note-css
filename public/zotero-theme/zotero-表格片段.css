@@ -1,0 +1,40 @@
+
+.primary-editor .tableWrapper table tr td,.primary-editor .tableWrapper table  {
+    border: none;
+}
+
+.primary-editor .tableWrapper table td  {
+    margin-bottom: 20px;
+}
+
+
+.primary-editor .tableWrapper table tr:first-child td{
+    text-align: center;
+    font-weight: bolder;
+    color: #1A365F;
+    vertical-align: middle;
+    border-top: #1A365F 3px solid;
+    border-bottom: #1A365F 3px solid;
+}
+
+.primary-editor .tableWrapper table tr:last-child td{
+
+    border-bottom: #1A365F 3px solid;
+}
+
+
+.primary-editor .tableWrapper table tr td {
+    min-width: 20%;
+
+}
+
+.primary-editor .tableWrapper table tr td:hover {
+    border-left: rgb(193, 193, 193) 3px solid;
+    border-right: rgb(162, 162, 162) 3px solid;
+
+}
+
+.primary-editor .tableWrapper table tr:not(table tr:first-child) td {
+    font-size: 0.9em;
+}
+

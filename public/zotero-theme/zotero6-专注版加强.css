@@ -1,0 +1,168 @@
+/*超链接*/
+
+a,
+a:visited {
+  /* 普通状态和访问过的链接 */
+  color: #4072e5;
+  /* 深绿色 */
+  text-decoration: underline;
+  /* 下划线 */
+}
+
+a:hover,
+a:focus {
+  /* 鼠标悬停和聚焦状态 */
+  color: rgba(255, 69, 0, 0.5);
+  /* 更深的绿色 */
+}
+
+blockquote:hover {
+  color: #495057;
+  background: #f8f9fa;
+  box-shadow: rgb(0 0 0 / 4%) 0px 3px 5px;
+  position: relative;
+  margin: 14px 0;
+  border: 3px solid hsl(17, 76%, 61%) !important;
+  transform: translateY(4px);
+}
+
+blockquote {
+  color: #495057;
+  background: #f8f9fa;
+  box-shadow: rgb(0 0 0 / 4%) 0px 3px 5px;
+  margin: 14px 0;
+  border: 2px solid #dee2e6 !important;
+  border-radius: 8px;
+  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.46, 0.95);
+}
+
+/* 改间距 */
+blockquote p {
+  margin: 10px;
+  padding-top: 0px;
+}
+
+/* 加粗样式 */
+strong {
+  background-color: rgba(190, 186, 186, 0.2);
+  color: #1a365f;
+  font-weight: bold;
+  font-size: 1.05em;
+}
+
+.primary-editor h1 {
+  font-size: 1.5em;
+  color: #1a365f;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* 标题样式 */
+.primary-editor h2 {
+  font-size: 1.3em;
+  font-weight: bolder;
+  color: #1a365f;
+  border-bottom: #ccc 2px solid;
+}
+
+.primary-editor h3 {
+  font-size: 1.2em;
+  color: #1a365f;
+}
+
+.primary-editor h4,
+.primary-editor h5,
+.primary-editor h6 {
+  font-size: 1.1em;
+  color: black;
+}
+/* 列表设计 */
+ul {
+  list-style-type: disc;
+}
+
+.primary-editor ul li::marker {
+  color: #70b3b1 ;
+}
+
+.primary-editor ul li:not(ul ul li)::marker {
+  color: #1d7774 ;
+  font-size: 16px;
+}
+
+ul,
+ol {
+  font-weight: bolder;
+}
+
+ul ul,
+ol ol {
+  font-weight: normal;
+  font-size: 14px;
+}
+
+ul li:not(ul ul li):not(ul li:first-child) {
+  border-top: #688593 2px solid;
+  margin-top: 20px;
+  padding-top: 15px;
+}
+
+
+ul li:not(ul ul li):not(ul li:first-child):hover {
+  border-top: #033650 4px solid;
+  transform-style: smooth;
+  transition-duration: 100ms;
+
+}
+
+
+
+
+.primary-editor .tableWrapper table tr td,.primary-editor .tableWrapper table  {
+  border: none;
+}
+
+.primary-editor .tableWrapper table td  {
+  margin-bottom: 20px;
+}
+
+
+.primary-editor .tableWrapper table tr:first-child td{
+  text-align: center;
+  font-weight: bolder;
+  color: #1A365F;
+  vertical-align: middle;
+  border-top: #1A365F 3px solid;
+  border-bottom: #1A365F 3px solid;
+}
+
+.primary-editor .tableWrapper table tr:last-child td{
+
+  border-bottom: #1A365F 3px solid;
+}
+
+
+.primary-editor .tableWrapper table tr td {
+  min-width: 20%;
+
+}
+
+.primary-editor .tableWrapper table tr td:hover {
+  border-left: rgb(193, 193, 193) 3px solid;
+  border-right: rgb(162, 162, 162) 3px solid;
+
+}
+
+.primary-editor .tableWrapper table tr:not(table tr:first-child) td {
+  font-size: 0.9em;
+}
+
+
+#editor-container .editor .editor-core  {
+  width: 100%;
+  height: 100%;
+  --color: #E1E1E1;
+  background-color: #F3F3F3;
+  background-image: linear-gradient(#ffffff 1.1rem, #ccc 1.2rem);
+  background-size: 100% 1.2rem;
+}

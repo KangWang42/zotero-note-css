@@ -1,0 +1,39 @@
+/* 列表设计 */
+ul {
+  list-style-type: disc;
+}
+
+.primary-editor ul li::marker {
+  color: #70b3b1 ;
+}
+
+.primary-editor ul li:not(ul ul li)::marker {
+  color: #1d7774 ;
+  font-size: 16px;
+}
+
+ul,
+ol {
+  font-weight: bolder;
+}
+
+ul ul,
+ol ol {
+  font-weight: normal;
+  font-size: 14px;
+}
+
+ul li:not(ul ul li):not(ul li:first-child) {
+  border-top: #688593 2px solid;
+  margin-top: 20px;
+  padding-top: 15px;
+}
+
+
+ul li:not(ul ul li):not(ul li:first-child):hover {
+  border-top: #033650 4px solid;
+  transform-style: smooth;
+  transition-duration: 100ms;
+
+}
+
