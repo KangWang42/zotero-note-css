@@ -18,7 +18,7 @@ import { RouterLink, RouterView } from "vue-router";
       <span
         class="absolute github right-72 transition ease-in-out delay-150 hover:scale-125 duration-300"
       >
-        <a href="https://github.com/KangWang42/zotero_notecss" target="_blank">
+        <a href="https://github.com/KangWang42/zotero-note-css" target="_blank">
           <img
             src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
             alt="GitHub"
