@@ -1,24 +1,24 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
-
 </script>
 <script>
-
 </script>
 <template>
   <div class="container">
     <header>
       <nav>
-        
         <span class="return"><a href="https://wk8686.top">返回博客</a> </span>
-        <span class="return"><a href="https://wk8686.top/archives/zoteroepi93">使用教程</a> </span>
-        <RouterLink to="/">全部CSS</RouterLink>
-        <RouterLink to="/theme">主题CSS</RouterLink>
-        <RouterLink to="/backview">背景CSS</RouterLink>
-        <RouterLink to="/elemenview">元素CSS</RouterLink>
-        <RouterLink to="/otherview">其它CSS</RouterLink>
-        <Dropdown/>
-      
+        <span class="return"
+          ><a href="https://wk8686.top/archives/zoteroepi93">使用教程</a>
+        </span>
+        <span class="router">
+          <RouterLink to="/">全部CSS</RouterLink>
+          <RouterLink to="/theme">主题CSS</RouterLink>
+          <RouterLink to="/backview">背景CSS</RouterLink>
+          <RouterLink to="/elemenview">元素CSS</RouterLink>
+          <RouterLink to="/otherview">其它CSS</RouterLink></span
+        >
+        <Dropdown class="drop"/>
       </nav>
       <span
         class="absolute github right-72 transition ease-in-out delay-150 hover:scale-125 duration-300"
@@ -33,15 +33,14 @@ import { RouterLink, RouterView } from "vue-router";
         </a>
       </span>
 
-      <div class="absolute cursor-pointerinline-block group  right-52 wechat ">
+      <div class="absolute cursor-pointerinline-block group right-52 wechat">
         <!-- 小尺寸的 SVG 微信图标 -->
         <svg
           t="1730884416770"
-          class="hover:scale-125  w-10 h-10 text-green-500 transition ease-in-out duration-300"
+          class="hover:scale-125 w-10 h-10 text-green-500 transition ease-in-out duration-300"
           viewBox="0 0 1024 1024"
           xmlns="http://www.w3.org/2000/svg"
           fill="#00C800"
-          
         >
           <path
             d="M1010.8 628c0-141.2-141.3-256.2-299.9-256.2-168 0-300.3 115.1-300.3 256.2 0 141.4 132.3 256.2 300.3 256.2 35.2 0 70.7-8.9 106-17.7l96.8 53-26.6-88.2c70.9-53.2 123.7-123.7 123.7-203.3zM618 588.8c-22.1 0-40-17.9-40-40s17.9-40 40-40 40 17.9 40 40c0 22-17.9 40-40 40z m194.3-0.3c-22.1 0-40-17.9-40-40s17.9-40 40-40 40 17.9 40 40-17.9 40-40 40z"
@@ -58,32 +57,13 @@ import { RouterLink, RouterView } from "vue-router";
           class="hidden group-hover:block fixed top-38 right-2 transform -translate-x-1/2 w-60 border border-gray-300 rounded-lg shadow-lg z-10"
         />
       </div>
-
     </header>
 
-
-      <RouterView></RouterView>
-
+    <RouterView></RouterView>
   </div>
 </template>
 
 <style scoped>
-
-@media (max-width: 800px) {
-  .wechat{
-  display: none;
-}
-
-.github{
-  display: none;
-}
-.return a{
-display: block;
-
-}
-
-}
-
 nav {
   width: 100%;
   font-size: 20px;
@@ -95,20 +75,20 @@ nav {
   display: block;
 }
 
-.wechat{
-  top:60px
+.wechat {
+  top: 60px;
 }
 
-.github{
-  top:32px
+.github {
+  top: 32px;
 }
-.return a{
+.return a {
   padding: 0 1rem;
   color: rgb(33, 38, 57);
   padding-right: 10px;
-  font-weight:600;
+  font-weight: 600;
 }
-.return:nth-child(2) a{
+.return:nth-child(2) a {
   padding-right: 30px;
   border-right: green 4px dashed;
 }
@@ -129,5 +109,42 @@ nav a {
 
 nav a:first-of-type {
   border: 0;
+}
+@media (max-width: 800px) {
+  .wechat {
+    display: none;
+  }
+
+  .github {
+    display: none;
+  }
+  .return a {
+    display: block;
+    text-align: center;
+    padding: 10px 0px;
+  }
+  .return:nth-child(2) a {
+    padding-right: 0;
+  }
+
+  header nav span.router {
+    display: flex;
+
+    flex-wrap: wrap;
+    gap: 5%;
+    row-gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  header nav span.router a {
+    min-width: 72px;
+    width: 30%;
+    justify-content: space-around;
+    text-align: center;
+  }
+  .drop{
+    display: block;
+    margin-left: 5%;
+  }
 }
 </style>
