@@ -3,13 +3,6 @@ import { RouterLink, RouterView } from "vue-router";
 
 </script>
 <script>
-import Dropdown from './components/dropdown.vue'; // 确保路径正确
-
-export default {
-  components: {
-    Dropdown
-  }
-}
 
 </script>
 <template>
