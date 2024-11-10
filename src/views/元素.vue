@@ -37,9 +37,7 @@ const filteredCards = computed(() => {
       <div class="pl-8">
         <h1 class="text-amber-500 pt-4">{{ card.subtitle }}</h1>
         <ol class="text-xs px-3 text-amber-950 font-bold">
-          <li class="py-2" v-for="detail in card.details" :key="detail">
-            {{ detail }}
-          </li>
+          <li  class="py-2" v-for="detail in card.details" :key="detail" v-html="detail"></li>
         </ol>
       </div>
       <div class="overflow-y-scroll max-h-72">

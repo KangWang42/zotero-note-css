@@ -194,12 +194,14 @@ export const cards = ref([
   },
   {
     title: "betternote模板-不同颜色注释导出",
-    author: "githubcopy来的",
+    author: "github copy来的",
     subtitle: "内容介绍",
     details: [
-      "这个模板直接粘贴到betternote模板编辑器使用",
+      "在新模板里，直接粘贴到betternote模板编辑器使用",
       "可以导出不同颜色的注释标注标题",
-      "如果用translate插件就可以导出注释的翻译"
+      "如果用translate插件就可以导出注释的翻译",
+      "注意要提前设置好注释的颜色才可以 ",
+      "<a href='https://www.wk8686.top/1731227962975' target='_blank'>教程链接</a>"
     ],
     image: "/pic/1731213483657.png",
     cssFile: "zoteronote-注释导出.txt",
@@ -231,6 +233,7 @@ export const cards = ref([
     author: "wang",
     subtitle: "模板介绍",
     details: [
+      "在新模板里，直接粘贴到betternote模板编辑器使用",
       "用来插入总结的表格",
       "包含了标题、标题翻译、作者、出版年份、期刊、期刊等级、论文标签、附件链接等信息",
       "设置了一些表格样式"
