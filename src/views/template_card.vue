@@ -4,24 +4,14 @@
     <span
       v-for="card in filteredCards"
       :key="card"
-      class="card hover:scale-105 duration-500 hover:shadow-2xl relative self-auto h-auto bg-gray-100 rounded-xl shadow-2xl min-w-72 w-1/4"
+      class="pt-4 card hover:scale-105 duration-500 hover:shadow-2xl relative self-auto h-auto bg-gray-100 rounded-xl shadow-2xl min-w-72 w-1/4"
     >
-      <div class="flex items-center p-3">
-        <div class="px-1" v-for="dot in card.dots" :key="dot.color">
-          <span
-            :class="[
-              'w-4 h-4 rounded-full inline-block cursor-pointer',
-              dot.color,
-            ]"
-          ></span>
-        </div>
-      </div>
       <div class="text-center">
-        <h1 class="pb-4 text-amber-800">{{ card.title }}</h1>
-        <p>作者:{{ card.author }}</p>
+        <h1 class="pb-2 px-4  text-lime-950 font-bold text-lg font-mono">{{ card.title }}</h1>
+        <p  class="text-amber-800 ">作者:{{ card.author }}</p>
       </div>
       <div class="pl-8">
-        <h1 class="text-amber-500 pt-4">{{ card.subtitle }}</h1>
+        <h1 class="text-blue-900">{{ card.subtitle }}</h1>
         <ol class="text-xs px-3 text-amber-950 font-bold">
           <li
             class="py-2"
@@ -36,7 +26,7 @@
       </div>
       <button
         @click="copyCSS(card.cssFile)"
-        class="hover:bg-zinc-600 active:bg-zinc-800 absolute bottom-4 right-12 cursor-pointer bg-zinc-400 px-3 py-2 rounded-md text-white tracking-wider shadow-xl animate-bounce hover:animate-none"
+        class="hover:bg-zinc-400 active:bg-slate-400 absolute bottom-4 right-12 cursor-pointer bg-slate-400 px-3 py-2 rounded-md text-white tracking-wider shadow-xl animate-bounce hover:animate-none"
       >
         下载CSS
       </button>
@@ -51,6 +41,24 @@ import { defineProps } from "vue";
 const props = defineProps({
   filteredCards: Array,
 });
+
+function copyCSS(cssFileName) {
+    fetch(`/zotero-theme/${cssFileName}`)
+        .then(response => response.text())
+        .then(cssContent => {
+            var tempInput = document.createElement('textarea');
+            tempInput.value = cssContent;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+            alert('内容复制成功!');
+        })
+        .catch(error => {
+            console.error('Error fetching CSS:', error);
+        });
+}
+
 </script>
 
 <style scope>
@@ -72,6 +80,8 @@ const props = defineProps({
   background-color: rgba(232, 235, 229, 0.4); /* 滚动条轨道颜色 */
   border-radius: 8px;
 }
-
+.card:hover{
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
 
 </style>
