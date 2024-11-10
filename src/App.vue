@@ -15,7 +15,7 @@
           <RouterLink to="/backview">背景CSS</RouterLink>
           <RouterLink to="/elemenview">元素CSS</RouterLink>
           <RouterLink to="/otherview">其它CSS</RouterLink>
-          <RouterLink to="/betternote">betternote模板</RouterLink>
+          <RouterLink to="/betternote">Betternote模板</RouterLink>
         </span >
 
         <Dropdown class="drop"/>
