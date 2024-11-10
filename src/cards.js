@@ -229,7 +229,7 @@ export const cards = ref([
   {
     title: "betternote模板-总结表格",
     author: "wang",
-    subtitle: "css介绍",
+    subtitle: "模板介绍",
     details: [
       "用来插入总结的表格",
       "包含了标题、标题翻译、作者、出版年份、期刊、期刊等级、论文标签、附件链接等信息",

@@ -32,6 +32,7 @@ const filteredCards = computed(() => {
 
 
 <template>
+    <blockquote>更多内容还是参考插件库的 <a href="https://github.com/windingwind/zotero-better-notes/discussions/categories/note-templates">模板讨论 </a> </blockquote>
       <div class="flex flex-wrap justify-center gap-y-20 pb-32 gap-x-2"><span v-for="card in filteredCards" :key="card" class="card hover:scale-105 duration-500 hover:shadow-2xl  relative h-auto mx-auto bg-gray-100 rounded-xl shadow-2xl min-w-72 w-1/4">
       <div class="flex items-center p-3">
         <div class="px-1" v-for="dot in card.dots" :key="dot.color">
