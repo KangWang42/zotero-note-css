@@ -193,6 +193,23 @@ export const cards = ref([
       ]
   },
   {
+    title: "betternote模板-不同颜色注释导出",
+    author: "githubcopy来的",
+    subtitle: "内容介绍",
+    details: [
+      "这个模板直接粘贴到betternote模板编辑器使用",
+      "可以导出不同颜色的注释标注标题",
+      "如果用translate插件就可以导出注释的翻译"
+    ],
+    image: "/pic/1731213483657.png",
+    cssFile: "zoteronote-注释导出.txt",
+      tags : [
+        "betternote模板",
+        "其它"
+
+      ]
+  },
+  {
     title: "zotero笔记主题CSS-greenfocus",
     author: "wang",
     subtitle: "css介绍",
@@ -206,6 +223,23 @@ export const cards = ref([
     cssFile: "zotero4-greenfocus.css",
       tags : [
         "主题"
+      ]
+  },
+  
+  {
+    title: "betternote模板-总结表格",
+    author: "wang",
+    subtitle: "css介绍",
+    details: [
+      "用来插入总结的表格",
+      "包含了标题、标题翻译、作者、出版年份、期刊、期刊等级、论文标签、附件链接等信息",
+      "设置了一些表格样式"
+    ],
+    image: "/pic/1731212798670.png",
+    cssFile: "zoteronote-总结表.txt",
+      tags : [
+        "betternote模板",
+        "表格"
       ]
   },
   {

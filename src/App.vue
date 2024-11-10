@@ -1,9 +1,3 @@
-<script setup>
-
-
-</script>
-<script>
-</script>
 <template>
   <div class="container">
 <Float/>
@@ -20,12 +14,14 @@
           <RouterLink to="/theme">主题CSS</RouterLink>
           <RouterLink to="/backview">背景CSS</RouterLink>
           <RouterLink to="/elemenview">元素CSS</RouterLink>
-          <RouterLink to="/otherview">其它CSS</RouterLink></span
-        >
+          <RouterLink to="/otherview">其它CSS</RouterLink>
+          <RouterLink to="/betternote">betternote模板</RouterLink>
+        </span >
+
         <Dropdown class="drop"/>
       </nav>
       <span
-        class="absolute github right-72 transition ease-in-out delay-150 hover:scale-125 duration-300"
+        class="absolute github  transition ease-in-out delay-150 hover:scale-125 duration-300"
       >
         <a href="https://github.com/KangWang42/zotero-note-css" target="_blank">
           <img
@@ -37,7 +33,7 @@
         </a>
       </span>
    
-      <div class="absolute cursor-pointerinline-block group right-52 wechat">
+      <div class="absolute cursor-pointerinline-block group  wechat">
         <!-- 小尺寸的 SVG 微信图标 -->
         <svg
           t="1730884416770"
@@ -82,10 +78,12 @@ nav {
 
 .wechat {
   top: 60px;
+  right: 80px;
 }
 
 .github {
   top: 32px;
+  right: 24px;
 }
 .return a {
   padding: 0 1rem;

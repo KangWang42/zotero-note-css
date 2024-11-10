@@ -1,0 +1,48 @@
+${{
+    async function getAnnotationsByColor(_item, color) {
+      const annots = _item
+        .getAnnotations()
+        .filter((item) => item.annotationColor === color);
+      if (annots.length === 0) {
+        return "";
+      }
+      return Zotero.BetterNotes.api.convert.annotations2html(annots, {
+        noteItem: targetNoteItem,
+      });
+    }
+    
+    const attachments = Zotero.Items.get(topItem.getAttachments()).filter((i) =>
+      i.isPDFAttachment()
+    );
+    
+    let res = ``;
+    
+    const colors = {
+      "#f9e196": "⭐ 知识-有趣的观点、事实、例子", // Yellow
+      "#f0bbcb": "⚠️ 重要的方法", // Magenta
+      "#ff6666" : "❌ 重要的问题", // Red   
+    };
+    for (const attachment of attachments) {
+      res += `📄For Document:${attachment.attachmentFilename}`;
+      for (const color in colors) {
+        if (Object.hasOwnProperty.call(colors, color)) {
+          const colorName = colors[color];
+          const renderedAnnotations = await getAnnotationsByColor(
+            attachment,
+            color
+          );
+          if (renderedAnnotations) {
+            res += `<h4><p style="background-color:${color};">${colorName}</h4></p>\n${renderedAnnotations}`;
+          }
+        }
+      }
+      const renderedAnnotations = await getAnnotationsByColor(
+        attachment,
+        (_annot) => !colors.includes(_annot.annotationColor)
+      );
+      if (renderedAnnotations) {
+        res += `<h4><p>Other Annotations</p></h4>\n${renderedAnnotations}`;
+      }
+    }
+    return res;
+    }}$

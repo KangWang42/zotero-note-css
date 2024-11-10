@@ -4,7 +4,7 @@ import  themeview from '../views/themecss.vue'
 import otherview from '../views/其它.vue'
 import elemenview from '../views/元素.vue'
 import backview from '../views/背景.vue'
-
+import betternote from '../views/btternote模板.vue'
  
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -36,6 +36,11 @@ const router = createRouter({
       path: '/otherview',
       name: 'otherview',
       component: otherview,
+    },
+    {
+      path:"/betternote",
+      name:"betternote",
+      component:betternote
     }
 
   ],

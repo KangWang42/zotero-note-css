@@ -1,0 +1,61 @@
+<table style="width:100%; border-collapse: collapse;">
+  <tr>
+    <td style="border: 1px solid black; min-width: 35%; padding: 8px; text-align: left;">标题翻译</td>
+    <td style="border: 1px solid black; padding: 8px;">${topItem.getField("titleTranslation")}</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid black; min-width: 35%; padding: 8px; text-align: left;">作者</td>
+    <td style="border: 1px solid black; padding: 8px;">	${topItem.getCreators().map((v) => v.firstName + " " + v.lastName).join("; ")}</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid black; min-width: 35%; padding: 8px; text-align: left;">出版年份</td>
+    <td style="border: 1px solid black; padding: 8px; text-align: center;">${topItem.getField('date')}</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid black; min-width: 35%; padding: 8px; text-align: left;">期刊</td>
+    <td style="border: 1px solid black; padding: 8px; text-align: center;">${topItem.getField('publicationTitle')}</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid black; min-width: 35%; padding: 8px; text-align: left;">期刊等级</td>
+    <td style="border: 1px solid black; padding: 8px; text-align: center;">${{let space = " ㅤㅤ ㅤㅤ"
+return Array.prototype.map.call(
+	Zotero.ZoteroStyle.api.renderCell(topItem, "publicationTags").childNodes,
+	e => {
+		e.innerText =  space + e.innerText + space;
+		return e.outerHTML
+	}
+	).join(space)
+}}$</td>
+</tr>
+  <tr>
+    <td style="border: 1px solid black; min-width: 35%; padding: 8px; text-align: center;">论文标签</td>
+    <td style="border: 1px solid black; text-align: center; padding: 8px;">${topItem.getTags().map(tagObj=>tagObj.tag)}</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid black; padding: 8px; text-align: left;">附件链接</td>
+    <td style="border: 1px solid black; padding: 8px;color:#4A148C">
+    <a href=${{async function getPDFLink(item) {
+    const att = await item.getBestAttachment();
+    if (!att || !att.isPDFAttachment()) {
+      return "";
+    }
+    key = att.key;
+    if (att.libraryID === 1) {
+      return `zotero://open-pdf/library/items/${key}`;
+    } else {
+      groupID = Zotero.Libraries.get(att.libraryID).id;
+      return `zotero://open-pdf/groups/${groupID}/items/${key}`;
+    }
+  }
+  sharedObj.getPDFLink = getPDFLink;
+  return await getPDFLink(topItem);
+}}$>
+        ${topItem.getField("title")}
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid black; padding: 8px; text-align: left;">摘要</td>
+    <td style="border: 1px solid black; padding: 8px;">${topItem.getField('abstractTranslation')}</td>
+  </tr>
+</table>

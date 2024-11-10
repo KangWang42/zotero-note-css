@@ -1,0 +1,171 @@
+<!-- author:wk-->
+
+
+
+<h1 style="font-size: 1.4em; margin-bottom: 2em; margin-right: 5px; padding: 8px 15px;letter-spacing: 2px;color: #000000;border-left: 10px solid rgba(240, 19, 19, 0.5);background: rgba(240, 19, 19, 0.25); border-radius: 5px; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); box-shadow: 1px 1px 2px rgba(51, 51, 51, 0.5); text-align: center">${topItem.getField("title")}</h1>
+
+${{// 假设从 Zotero API 获取的 HTML 元素存储在变量 element 中
+let element = Zotero.ZoteroStyle.api.renderCell(topItem, "readingTime");
+
+// 获取元素的文本内容
+let textContent = element.innerText;
+
+// 输出文本内容
+return textContent
+}}$
+
+<table style="width:100%; border-collapse: collapse;">
+  <tr>
+    <td style="border: 1px solid black; min-width: 35%; padding: 8px; text-align: left;">标题翻译</td>
+    <td style="border: 1px solid black; padding: 8px;">${topItem.getField("titleTranslation")}</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid black; min-width: 35%; padding: 8px; text-align: left;">作者</td>
+    <td style="border: 1px solid black; padding: 8px;">	${topItem.getCreators().map((v) => v.firstName + " " + v.lastName).join("; ")}</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid black; min-width: 35%; padding: 8px; text-align: left;">出版年份</td>
+    <td style="border: 1px solid black; padding: 8px; text-align: center;">${topItem.getField('date')}</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid black; min-width: 35%; padding: 8px; text-align: left;">期刊</td>
+    <td style="border: 1px solid black; padding: 8px; text-align: center;">${topItem.getField('publicationTitle')}</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid black; min-width: 35%; padding: 8px; text-align: left;">期刊等级</td>
+    <td style="border: 1px solid black; padding: 8px; text-align: center;">${{let space = " ㅤㅤ ㅤㅤ"
+return Array.prototype.map.call(
+	Zotero.ZoteroStyle.api.renderCell(topItem, "publicationTags").childNodes,
+	e => {
+		e.innerText =  space + e.innerText + space;
+		return e.outerHTML
+	}
+	).join(space)
+}}$</td>
+</tr>
+  <tr>
+    <td style="border: 1px solid black; min-width: 35%; padding: 8px; text-align: center;">论文标签</td>
+    <td style="border: 1px solid black; text-align: center; padding: 8px;">${topItem.getTags().map(tagObj=>tagObj.tag)}</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid black; padding: 8px; text-align: left;">附件链接</td>
+    <td style="border: 1px solid black; padding: 8px;color:#4A148C">
+    <a href=${{async function getPDFLink(item) {
+    const att = await item.getBestAttachment();
+    if (!att || !att.isPDFAttachment()) {
+      return "";
+    }
+    key = att.key;
+    if (att.libraryID === 1) {
+      return `zotero://open-pdf/library/items/${key}`;
+    } else {
+      groupID = Zotero.Libraries.get(att.libraryID).id;
+      return `zotero://open-pdf/groups/${groupID}/items/${key}`;
+    }
+  }
+  sharedObj.getPDFLink = getPDFLink;
+  return await getPDFLink(topItem);
+}}$>
+        ${topItem.getField("title")}
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid black; padding: 8px; text-align: left;">摘要</td>
+    <td style="border: 1px solid black; padding: 8px;">${topItem.getField('abstractTranslation')}</td>
+  </tr>
+</table>
+
+<hr/>
+<h2 style='text-align:center'>目录</h2>
+<table style="text-align:center;width:100%; border-collapse: collapse; margin: 0 auto; background-color: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+  <tr>
+    <td style="padding: 10px; background-color: #FFF8E1;"><a href="#back" style="text-decoration: none; color: black;">📜 背景</a></td>
+  </tr>
+  <tr>
+    <td style="padding: 10px; background-color: #F1F8E9;"><a href="#cont" style="text-decoration: none; color: black;">🔬 研究内容</a></td>
+  </tr>
+  <tr>
+    <td style="padding: 10px; background-color: #F5F5F5;"><a  href="#result" style="text-decoration: none; color: black;">🚩 研究结果</a></td>
+  </tr>
+  <tr>
+    <td style="padding: 10px; background-color: #E0F7FA;"><a href="#creat" style="text-decoration: none; color: black;">📌 创新点</a></td>
+  </tr>
+  <tr>
+    <td style="padding: 10px; background-color: #E1F5FE;"><a href="#other" style="text-decoration: none; color: black;">🔬 其它</a></td>
+  </tr>
+  <tr>
+    <td style="padding: 10px; background-color: #E1F5FE;"><a href="#anno" style="text-decoration: none; color: black;">📌 PDF注释</a></td>
+  </tr>
+</table>
+
+<em style='font-size:7px;text-align:center!important;color:#9e9e9e;margin-top: 30px;'>点击 Ctrl+左键 即可跳转</em>
+
+
+
+<br/>
+<hr/>
+
+
+<h2 id="back">📜 背景</h2> 
+<p ></p><hr/>
+<h2 id="cont">🔬 研究内容</h2> 
+<p ></p><hr/>
+<h2 id="result" >🚩 研究结果</h2> 
+<p ></p><hr/>
+<h2 id="creat">📌 创新点</h2>
+<p ></p> <hr/>
+<h2 id="other">🔬 其它</h2> 
+<p ></p> <hr/>
+<h2 id="anno"> a 📌PDF注释</h2>
+<p ></p>  
+${{
+  async function getAnnotationsByColor(_item, color) {
+    const annots = _item
+      .getAnnotations()
+      .filter((item) => item.annotationColor === color);
+    if (annots.length === 0) {
+      return "";
+    }
+    return Zotero.BetterNotes.api.convert.annotations2html(annots, {
+      noteItem: targetNoteItem,
+    });
+  }
+  
+  const attachments = Zotero.Items.get(topItem.getAttachments()).filter((i) =>
+    i.isPDFAttachment()
+  );
+  
+  let res = ``;
+  
+  const colors = {
+    "#f9e196": "⭐ 知识-有趣的观点、事实、例子", // Yellow
+    "#f0bbcb": "⚠️ 重要的方法", // Magenta
+  };
+  for (const attachment of attachments) {
+    res += `📄For Document:${attachment.attachmentFilename}`;
+    for (const color in colors) {
+      if (Object.hasOwnProperty.call(colors, color)) {
+        const colorName = colors[color];
+        const renderedAnnotations = await getAnnotationsByColor(
+          attachment,
+          color
+        );
+        if (renderedAnnotations) {
+          res += `<h4><p style="background-color:${color};">${colorName}</h4></p>\n${renderedAnnotations}`;
+        }
+      }
+    }
+    const renderedAnnotations = await getAnnotationsByColor(
+      attachment,
+      (_annot) => !colors.includes(_annot.annotationColor)
+    );
+    if (renderedAnnotations) {
+      res += `<h4><p>Other Annotations</p></h4>\n${renderedAnnotations}`;
+    }
+  }
+  return res;
+  }}$
+  
+  
+  <hr />
