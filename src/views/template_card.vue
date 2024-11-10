@@ -1,10 +1,10 @@
 
 <template>
-  <div class="flex flex-wrap justify-center gap-y-20 pb-32 gap-x-2">
+  <div class="flex flex-wrap justify-around gap-y-20 pb-32 gap-x-2 items-start">
     <span
       v-for="card in filteredCards"
       :key="card"
-      class="card hover:scale-105 duration-500 hover:shadow-2xl relative h-auto mx-auto bg-gray-100 rounded-xl shadow-2xl min-w-72 w-1/4"
+      class="card hover:scale-105 duration-500 hover:shadow-2xl relative self-auto h-auto bg-gray-100 rounded-xl shadow-2xl min-w-72 w-1/4"
     >
       <div class="flex items-center p-3">
         <div class="px-1" v-for="dot in card.dots" :key="dot.color">
@@ -31,7 +31,7 @@
           ></li>
         </ol>
       </div>
-      <div class="overflow-y-scroll max-h-72">
+      <div class="scrollbar overflow-y-scroll max-h-72 ">
         <img class="w-full" :src="card.image" alt="" />
       </div>
       <button
@@ -52,3 +52,26 @@ const props = defineProps({
   filteredCards: Array,
 });
 </script>
+
+<style scope>
+/* 自定义滚动条样式 */
+.scrollbar::-webkit-scrollbar {
+  width: 4px; /* 滚动条的宽度 */
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 116, 139, 0.7); /* 滑块颜色 */
+  border-radius: 8px; /* 圆角滑块 */
+}
+
+.scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(100, 116, 139, 0.9); /* 悬停时颜色 */
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  background-color: rgba(232, 235, 229, 0.4); /* 滚动条轨道颜色 */
+  border-radius: 8px;
+}
+
+
+</style>
