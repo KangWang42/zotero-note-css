@@ -100,6 +100,21 @@ export const cards = ref([
       ]
     },
     {
+      title: "zoteroCSS片段-字体修改",
+      author: "wang",
+      subtitle: "CSS介绍",
+      details: [
+        "设置中文字体为宋体",
+        "设置英文字体为times new roman"
+      ],
+      image: "/pic/1731209621568.png",
+      cssFile: "zotero-font.css",
+      tags : [
+        "其它"
+      ]
+
+    },
+    {
       title: "zoteroCSS片段-横线背景",
       author: "wang",
       subtitle: "主题介绍",
