@@ -17,6 +17,7 @@ app.use(Antd);
 app.component('Dropdown', dropdown)
    .component('Comment', comment)
    .component('Float', float)
+   
 
 // 使用 Vue Router
 app.use(router);

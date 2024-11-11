@@ -36,6 +36,7 @@
 </template>
 
 <script setup>
+import { UserOutlined, DownOutlined } from '@ant-design/icons-vue';
 import { FontSizeOutlined } from "@ant-design/icons-vue";
 import Dropdown from "ant-design-vue/es/dropdown/dropdown";
 

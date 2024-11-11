@@ -1,35 +1,20 @@
 <script setup>
 import { ref, computed } from "vue";
 import { cards } from "../cards.js";
-import { copyCSS , highlightMatch} from "../script.js";
+import { copyCSS , highlightMatch, filterc} from "../script.js";
 import template_card from './template_card.vue'
-
+import searchinput from './serchinput.vue'
 
 const searchword = ref("");
 
-const filteredCards = computed(() => {
-    if (!searchword.value.trim()) {
-      return cards.value;
-    }
-    return cards.value.filter(card =>
-      card.details.some(detail => detail.toLowerCase().includes(searchword.value.toLowerCase()))
-    ).map(card => ({
-      ...card,
-      details: card.details.map(detail => highlightMatch(detail, searchword.value))
-    }));
-  });
+const filteredCards = filterc(cards, '',searchword);
 
 
 </script>
 
 
 <template>
-  <input
-    v-model="searchword"
-    type="text"
-    placeholder="根据介绍搜索CSS..."
-    class="search-box"
-  />
+<searchinput v-model="searchword"/>
  <template_card :filteredCards="filteredCards"/>
 </template>
 
@@ -52,6 +37,7 @@ input {
 .card mark{
   background-color: rgb(224, 174, 146);
 }
+
 
 
 </style>

@@ -1,5 +1,6 @@
 import { computed } from 'vue';
 
+
 export function copyCSS(cssFileName) {
     fetch(`/zotero-theme/${cssFileName}`)
         .then(response => response.text())
@@ -27,4 +28,25 @@ export const highlightMatch = (text, query) => {
   
 
 
-
+  export function filterc(cards, content, searchword) {
+    return computed(() => {
+      // 如果 searchword 为空，返回所有 cards
+      if (!searchword.value.trim()) {
+        return cards.value;
+      }
+      
+      // 如果 searchword 有值，则进行筛选
+      return cards.value
+        .filter((card) =>
+          card.details.some((detail) =>
+            detail.toLowerCase().includes(searchword.value.toLowerCase())
+          )
+        )
+        .map((card) => ({
+          ...card,
+          details: card.details.map((detail) =>
+            highlightMatch(detail, searchword.value)
+          ),
+        }));
+    });
+  }

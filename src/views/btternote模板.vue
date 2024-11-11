@@ -1,7 +1,11 @@
 <script setup>
 import { ref, computed } from "vue";
-import { cards} from "../cards.js"
+import { cards } from "../cards.js";
+import {  highlightMatch, filterc} from "../script.js";
 import template_card from './template_card.vue'
+import searchinput from './serchinput.vue'
+
+const searchword = ref("");
 
 
 function copyCSS(cssFileName) {
@@ -21,24 +25,16 @@ function copyCSS(cssFileName) {
         });
 }
 
+const filteredCards = filterc(cards, 'betternote模板',searchword);
 
-// Correct usage in a Vue 3 setup
-const filteredCards = computed(() => {
-    return cards.value.filter(card => card.tags.includes("betternote模板"));
-});
 
 </script>
 
 
-
-
 <template>
-  <blockquote>更多内容还是参考插件库的 <a href="https://github.com/windingwind/zotero-better-notes/discussions/categories/note-templates">模板讨论 </a> </blockquote>
+  <searchinput v-model="searchword"/>
  <template_card :filteredCards="filteredCards"/>
 </template>
-
-
-
 
 
 
@@ -46,5 +42,22 @@ const filteredCards = computed(() => {
 span.card {
   max-width: 30%;
 }
+
+input {
+  margin: 10px 30px!important;
+  border: grey 3px solid;
+  border-radius: 15px;
+  padding: 3px 20px;
+  margin-bottom: 25px!important;
+
+}
+
+.card mark{
+  background-color: rgb(224, 174, 146);
+}
+
+
+
 </style>
+
   

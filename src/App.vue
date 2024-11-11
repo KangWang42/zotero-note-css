@@ -1,10 +1,14 @@
+<script setup>
+
+
+</script>
+
 <template>
   <div class="container">
-<Float/>
-    <header>
 
+    <Float />
+    <header>
       <nav>
-    
         <span class="return"><a href="https://wk8686.top">返回博客</a> </span>
         <span class="return"
           ><a href="https://wk8686.top/archives/zoteroepi93">使用教程</a>
@@ -16,12 +20,12 @@
           <RouterLink to="/elemenview">元素CSS</RouterLink>
           <RouterLink to="/otherview">其它CSS</RouterLink>
           <RouterLink to="/betternote">Betternote模板</RouterLink>
-        </span >
+        </span>
 
-        <Dropdown class="drop"/>
+
       </nav>
       <span
-        class="absolute github  transition ease-in-out delay-150 hover:scale-125 duration-300"
+        class="absolute github transition ease-in-out delay-150 hover:scale-125 duration-300"
       >
         <a href="https://github.com/KangWang42/zotero-note-css" target="_blank">
           <img
@@ -32,8 +36,8 @@
           />
         </a>
       </span>
-   
-      <div class="absolute cursor-pointerinline-block group  wechat">
+
+      <div class="absolute cursor-pointerinline-block group wechat">
         <!-- 小尺寸的 SVG 微信图标 -->
         <svg
           t="1730884416770"
@@ -58,9 +62,8 @@
         />
       </div>
     </header>
-   
-    <RouterView></RouterView>
 
+    <RouterView></RouterView>
   </div>
 </template>
 
@@ -145,7 +148,7 @@ nav a:first-of-type {
     justify-content: space-around;
     text-align: center;
   }
-  .drop{
+  .drop {
     display: block;
     margin-left: 5%;
   }
