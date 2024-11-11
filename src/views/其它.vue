@@ -1,6 +1,6 @@
 <script setup>
 import { ref, computed } from "vue";
-import { cards } from "../cards.js";
+import { cards } from "../../public/cards.js";
 import { copyCSS , highlightMatch, filterc} from "../../public/script.js";
 import template_card from '../components/template_card.vue'
 import searchinput from '../components/serchinput.vue'
