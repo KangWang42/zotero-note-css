@@ -2,8 +2,8 @@
 import { ref, computed } from "vue";
 import { cards } from "../cards.js";
 import { copyCSS, highlightMatch, filterc } from "../script.js";
-import template_card from "./template_card.vue";
-import searchinput from "./serchinput.vue";
+import template_card from "../components/template_card.vue";
+import searchinput from "../components/serchinput.vue";
 
 const searchword = ref("");
 
