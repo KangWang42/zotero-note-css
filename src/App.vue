@@ -5,7 +5,6 @@
 
 <template>
   <div class="container">
-
     <Float />
     <header>
       <nav>

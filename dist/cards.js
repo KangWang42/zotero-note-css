@@ -281,10 +281,27 @@ export const cards = ref([
       "在使用zotero做笔记的时候如果公式过长，就会适应内容整个笔记都很宽",
       "所以我设置了这个css，如果公式过长，就会在公式块内scroll，不影响笔记宽度",
       "同时修改了公式的字体和颜色",
-      "修改了一些缩进看着更好看"
+      "修改了一些缩进看着更好看",
+      "同时修改了scrollbar的颜色为暗红色"
     ],
     image: "/pic/formula.png",
     cssFile: "zotero-公式样式.css",
+      tags : [
+        "元素",
+        "其它"
+      ]
+  },
+  {
+    title: "zotero笔记CSS-笔记scrollbar样式修改",
+    author: "wang",
+    subtitle: "css介绍",
+    details: [
+      "zotero笔记的scrollbar默认样式是灰色滑动条",
+      "复制代码可以改为蓝色滑动条",
+      "进一步可以自己改为任意颜色"
+    ],
+    image: "/pic/scrollbar.png",
+    cssFile: "zotero-scrollbar.css",
       tags : [
         "元素",
         "其它"

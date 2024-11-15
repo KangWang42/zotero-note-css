@@ -1,0 +1,4 @@
+#editor-container > div > div.editor-core{
+    scrollbar-width: thin;
+    scrollbar-color: rgba(13, 32, 110, 0.7) rgba(232, 235, 229, 0.4); /* 设定滚动条滑块和轨道颜色 */
+}

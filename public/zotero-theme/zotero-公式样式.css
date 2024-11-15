@@ -6,12 +6,14 @@
   > span.math-render
   > span
   > span.katex-html {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(234, 59, 88, 0.7) rgba(232, 235, 229, 0.4); /* 设定滚动条滑块和轨道颜色 */
   color: #451717;
   font-family: "Times New Roman", serif;
   background-color: #f0f0f0;
   display: inline-block;
-  overflow-x: auto; /* 超出部分显示水平滚动条 */
-  white-space: nowrap; /* 防止文本换行 */
+  overflow-x: auto;
+  white-space: nowrap;
   max-width: 90vw;
   padding: 20px 15px;
 }
