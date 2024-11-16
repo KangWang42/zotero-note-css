@@ -306,7 +306,53 @@ export const cards = ref([
         "元素",
         "其它"
       ]
+  },
+  {
+    title: "zotero笔记CSS-浅蓝表格背景",
+    author: "wang",
+    subtitle: "css介绍",
+    details: [
+      "修改背景方格密布背景",
+      "设置了透明度较淡",
+      "但是随着屏幕背景是固定的"
+    ],
+    image: "/pic/1731724527018.png",
+    cssFile: "zotero-浅蓝表格背景.css",
+      tags : [
+        "背景"
+      ]
   }
+,
+  {
+    title: "zotero笔记CSS-黑白背景",
+    author: "wang",
+    subtitle: "css介绍",
+    details: [
+      "修改背景为黑白色交互",
+      "不建议，过于杂乱效果不好"
+    ],
+    image: "/pic/1731723078580.png",
+    cssFile: "zotero-黑白背景.css",
+      tags : [
+        "背景"
+      ]
+  },
+  {
+    title: "zotero笔记CSS-圆环背景",
+    author: "wang",
+    subtitle: "css介绍",
+    details: [
+      "修改背景为暗红色圆环",
+      "排布可以密了一点",
+      "里边的颜色很好修改"
+    ],
+    image: "/pic/1731724859694.png",
+    cssFile: "zotero-圆环背景.css",
+      tags : [
+        "背景"
+      ]
+  }
+
   
   ]);
   

@@ -166,3 +166,30 @@ ul li:not(ul ul li):not(ul li:first-child):hover {
   background-image: linear-gradient(#ffffff 1.1rem, #ccc 1.2rem);
   background-size: 100% 1.2rem;
 }
+
+
+#editor-container
+  > div
+  > div.editor-core
+  > div.ProseMirror.primary-editor
+  math-inline
+  > span.math-render
+  > span
+  > span.katex-html {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(234, 59, 88, 0.7) rgba(232, 235, 229, 0.4); /* 设定滚动条滑块和轨道颜色 */
+  color: #451717;
+  font-family: "Times New Roman", serif;
+  background-color: #f0f0f0;
+  display: inline-block;
+  overflow-x: auto;
+  white-space: nowrap;
+  max-width: 90vw;
+  padding: 20px 15px;
+}
+
+
+#editor-container > div > div.editor-core{
+  scrollbar-width: thin;
+  scrollbar-color: rgba(13, 32, 110, 0.7) rgba(232, 235, 229, 0.4); /* 设定滚动条滑块和轨道颜色 */
+}
