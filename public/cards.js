@@ -351,7 +351,22 @@ export const cards = ref([
       tags : [
         "背景"
       ]
-  }
+  },
+  {
+    title: "zotero笔记CSS-黑色小点背景",
+    author: "wang",
+    subtitle: "css介绍",
+    details: [
+      "修改背景为黑色的小点",
+      "点很小",
+      "背景是淡淡的浅色"
+    ],
+    image: "/pic/1731759357565.png",
+    cssFile: "zotero-蓝色点阵背景.css",
+      tags : [
+        "背景"
+      ]
+  },
 
   
   ]);
