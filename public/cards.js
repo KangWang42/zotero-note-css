@@ -40,7 +40,7 @@ export const cards = ref([
     {
       title: "zoteroCSS片段-无序列表样式",
       author: "wang",
-      subtitle: "主题介绍",
+      subtitle: "CSS介绍",
       details: [
         "为什么只有无序列表样式，因为平时太懒，基本都是用无序列表",
         "加了列表一级的字体和marker大小和深浅",
@@ -50,6 +50,23 @@ export const cards = ref([
       ],
       image: "/pic/202411072254734.gif",
       cssFile: "zotero-无序列表效果.css",
+      tags : [
+        "元素"
+      ]
+    },
+    {
+      title: "zoteroCSS片段-有序列表样式",
+      author: "wang",
+      subtitle: "CSS介绍",
+      details: [
+        "有序列表体现了结构层级",
+        "设置了不同level的marker颜色",
+        "设置了不同level的样式",
+        "一级的列表加了颜色",
+        "具体可以看图"
+      ],
+      image: "/pic/1733653020818.png",
+      cssFile: "zotero-有序列表.css",
       tags : [
         "元素"
       ]
@@ -118,7 +135,6 @@ export const cards = ref([
       tags : [
         "其它"
       ]
-
     },
     {
       title: "zoteroCSS片段-横线背景",

@@ -1,0 +1,44 @@
+/* 为所有 ol 设置默认样式，然后为每个层级定制特定样式 */
+
+.primary-editor ol li:not(ol ol li)::marker {
+  color: brown;
+}
+
+.primary-editor ol li{
+  font-weight: bolder;
+}
+.primary-editor ol ol li{
+    font-weight: normal;
+  }
+/* 二级列表样式 */
+.primary-editor ol ol:not(ol ol ol) {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+.primary-editor ol ol li:not(ol ol ol li) {
+  position: relative;
+  padding-left: 5px;
+}
+
+.primary-editor ol ol li:not(ol ol ol li)::before {
+  content: "(" counter(list-item) ")";
+  position: absolute;
+  left: -25px;
+  top: 0px;
+  color: rgb(46, 69, 107);
+}
+
+/* 三级列表 */
+.primary-editor ol ol ol li {
+  list-style-type: lower-roman;
+  color: darkgreen;
+}
+
+.primary-editor ol ol ol ol li {
+  list-style-type: disc;
+}
+
+.primary-editor ol ol ol ol li::marker {
+  color: rgb(49, 76, 115);
+}
